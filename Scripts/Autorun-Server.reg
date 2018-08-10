@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
+"Tawk To"="\"C:\\Program Files\\tawk.to\\tawk.to.exe\""
+"Task"="\"C:\\Radio-Delicias\\server\\Scripts\\create-task.bat\" /min"
+"Server Radio"="\"C:\\Radio-Delicias\\server\\start.bat\" /min"

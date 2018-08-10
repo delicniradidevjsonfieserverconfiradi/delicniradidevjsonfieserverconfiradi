@@ -1,0 +1,16 @@
+authtoken: 337VpPf3ARwaFDqXUDaS1_6pA2DM2kDLj1tFuhY5ZMo
+region: us
+update: false
+# console_ui: false
+# web_addr: false
+tunnels:
+  radio:
+    proto: http
+    addr: 8000
+    inspect: false
+    bind_tls: true
+  tplink:
+    proto: http
+    addr: 192.168.0.1:80
+    inspect: false
+    bind_tls: false
