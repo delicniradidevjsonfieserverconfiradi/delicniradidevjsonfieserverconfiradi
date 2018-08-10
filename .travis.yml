@@ -1,0 +1,44 @@
+language: python
+
+python:
+  - 3.6
+
+# blocklist
+branches:
+  except:
+  - server
+  - Deploy
+
+# safelist
+branches:
+  only:
+  - jsonTransmission
+
+git:
+  depth: 1
+  quiet: true
+
+before_script:
+  - git config --global user.name "radio-delicias"
+  - git config --global user.email "radio-delicias@mail.com"
+  - mkdir deploy
+  - cd deploy
+  - git clone --depth 1 --branch master --single-branch $BRANCH_RADIO_DELICIAS . || (git init && git remote add -t master origin $BRANCH_RADIO_DELICIAS)
+  - rm -r index.html
+  - cd ..
+
+script:
+  - git clone --depth=1 -b Deploy --single-branch https://github.com/delicniradidevjsonfieserverconfiradi/delicniradidevjsonfieserverconfiradi.git
+  - mv delicniradidevjsonfieserverconfiradi createWebsite
+  - mv radio-ngrok.json createWebsite/
+  - cd createWebsite
+  - python3 create-website.py
+  - mv index.html ../deploy/
+  - cd ..
+
+after_script:
+  - cd deploy
+  - git add -A .
+  - git commit -m "$(date +'%Y-%m-%d %H:%M:%S') -> $(git log --format=%h -1)"       
+  - git branch -m master
+  - git push -q -u origin master  # Push silently so we don't leak information
