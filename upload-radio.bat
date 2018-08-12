@@ -1,7 +1,7 @@
 @echo off
 
 :comparar
-C:\Windows\System32\fc /w C:\Radio-Delicias\json_transmission\radio-ngrok.json C:\Radio-Delicias\config\radio-ngrokAnt.json > nul
+C:\Windows\System32\fc /w C:\Radio-Delicias\json_transmission\radio-ngrok.json C:\Radio-Delicias\json_transmission\radio-ngrokAnt.json > nul
 IF %errorlevel% EQU 0 GOTO END
 
 :DIFERENTES
