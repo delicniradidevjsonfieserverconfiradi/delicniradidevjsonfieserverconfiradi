@@ -1,1 +1,1 @@
-{"error_code":100,"status_code":404,"msg":"tunnel not found","details":{"name":"radio"}}
+{"name":"radio","uri":"/api/tunnels/radio","public_url":"https://8a638bad.ngrok.io","proto":"https","config":{"addr":"localhost:8000","inspect":false},"metrics":{"conns":{"count":0,"gauge":0,"rate1":0,"rate5":0,"rate15":0,"p50":0,"p90":0,"p95":0,"p99":0},"http":{"count":0,"rate1":0,"rate5":0,"rate15":0,"p50":0,"p90":0,"p95":0,"p99":0}}}
