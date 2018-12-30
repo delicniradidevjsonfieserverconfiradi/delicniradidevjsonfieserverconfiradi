@@ -24,7 +24,7 @@ before_script:
   - mkdir deploy
   - cd deploy
   - git clone --depth 1 --branch master --single-branch $BRANCH_RADIO_DELICIAS . || (git init && git remote add -t master origin $BRANCH_RADIO_DELICIAS)
-  - rm -r index.html
+  - rm -rf index.html
   - cd ..
 
 script:
